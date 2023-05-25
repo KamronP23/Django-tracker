@@ -3,5 +3,5 @@ from todos.views import todo_list_list, todo_list_detail
 
 urlpatterns = [
     path("", todo_list_list, name="todos"),
-    path("<int:id>/", todo_list_detail, name="todos")
+    path("<int:id>/", todo_list_detail, name="todo_list_detail")
 ]
