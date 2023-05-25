@@ -1,7 +1,7 @@
 from django.urls import path
-from todos.views import todos_list_list
+from todos.views import todo_list_list
 
 urlpatterns = [
-    path("", todos_list_list, name="todos"),
+    path("", todo_list_list, name="todos"),
 
 ]
