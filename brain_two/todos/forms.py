@@ -7,5 +7,4 @@ class TodoListForm(ModelForm):
         model = TodoList
         fields = [
             "name",
-            "created_on"
         ]

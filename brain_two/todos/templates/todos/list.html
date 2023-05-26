@@ -9,7 +9,10 @@
 <body>
     <header>
         <div>
-            <nav></nav>
+            <nav>
+                <a href="{% url 'todos' %}"> Main </a>
+                <a href="{% url 'todo_list_create' %}"> Create </a>
+            </nav>
         </div>
     </header>
     <main>

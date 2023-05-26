@@ -22,12 +22,11 @@ def todo_list_create(request):
     if request.method == "POST":
         form = TodoListForm(request.post)
         if form.is_valid():
-            todo = form.save(False)
-            todo.save()
+            form.save()
             return redirect("todos")
-        else:
-            form = TodoListForm()
-        context = {
-            "form": form
-        }
-        return render(request, "todos/create.html", context)
+    else:
+        form = TodoListForm()
+    context = {
+        "form": form
+    }
+    return render(request, "todos/create.html", context)
