@@ -27,7 +27,7 @@
                             <td>
                                 <a href="{% url 'todo_list_detail' todos.id %}"> {{ todos.name }} </a>
                             </td>
-                            <td></td>
+                            <td> {{ todos.todos.all|length }} </td>
                         </tr>
                         {% endfor %}
                     </tbody>
