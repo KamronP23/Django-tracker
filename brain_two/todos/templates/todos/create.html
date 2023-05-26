@@ -16,7 +16,12 @@
     </header>
     <main>
         <div>
-            <h1>My Lists</h1>
+            <h1>Create a New List</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Create</button>
+            </form>
         </div>
     </main>
 </body>

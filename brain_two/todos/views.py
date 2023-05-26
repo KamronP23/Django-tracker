@@ -20,7 +20,7 @@ def todo_list_detail(request, id):
 
 def todo_list_create(request):
     if request.method == "POST":
-        form = TodoListForm(request.post)
+        form = TodoListForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect("todos")
