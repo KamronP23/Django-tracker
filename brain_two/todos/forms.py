@@ -10,9 +10,12 @@ class TodoListForm(ModelForm):
         ]
 
 
-class TodoItem(ModelForm):
+class TodoItemForm(ModelForm):
     class Meta:
         model = TodoItem
         fields = [
-            "__all__"
+            "task",
+            "due_date",
+            "is_completed",
+            "list"
         ]
