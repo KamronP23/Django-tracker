@@ -11,6 +11,7 @@
         <div>
             <nav>
                 <a href="{% url 'todos' %}"> Main </a>
+
             </nav>
         </div>
     </header>
@@ -32,7 +33,9 @@
                         {% for item in todo_list.todos.all %}
 
                         <tr>
-                            <td>{{ item.task }} </td>
+                            <td>
+                                <a href="{% url 'todo_item_update' item.id %}"> {{ item.task }} </a>
+                            </td>
                             <td>{{ item.due_date }}</td>
                         </tr>
                         {% endfor %}
